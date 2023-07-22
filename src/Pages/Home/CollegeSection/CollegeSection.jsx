@@ -22,7 +22,7 @@ const CollegeSection = () => {
           placeholder="search college"
         />
         <div className=" bg-gray-500 text-white p-3 cursor-pointer rounded-full">
-          <FaSearch className="w-7 h-7" />
+          <FaSearch className="w-5 h-5" />
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 justify-items-center gap-5">
