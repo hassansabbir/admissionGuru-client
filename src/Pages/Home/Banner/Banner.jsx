@@ -5,8 +5,16 @@ const Banner = () => {
     <div className="flex justify-between">
       <div>
         <h2 className="text-5xl ">AdmissionGuru</h2>
+        <p className="text-2xl">
+          Discover your dream college at AdmissionGuru! 🎓 <br /> Explore
+          prestigious universities and institutions, compare details, and make
+          an informed decision. Unleash your potential and find the perfect
+          match for your future. Join us on this exciting educational journey.
+          Your dream college awaits.
+        </p>
+        <p className="text-2xl">Start exploring now! 🚀🌟</p>
       </div>
-      <img className="w-6/12" src={bannerImg} alt="bannerImg" />
+      <img className="w-4/12" src={bannerImg} alt="bannerImg" />
     </div>
   );
 };
