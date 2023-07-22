@@ -4,7 +4,7 @@ const CollegeCard = ({ college }) => {
   const {
     _id,
     collegeName,
-    images,
+    collegeImage,
     researchHistory,
     admissionStarts,
     admissionEnds,
@@ -15,7 +15,11 @@ const CollegeCard = ({ college }) => {
   return (
     <div className="card w-[450px] bg-slate-50 shadow-xl hover:shadow-2xl">
       <figure>
-        <img className="w-[450px] h-[300px]" src={images} alt="colleges" />
+        <img
+          className="w-[450px] h-[300px]"
+          src={collegeImage}
+          alt="colleges"
+        />
       </figure>
       <div className="card-body">
         <h2 className="card-title text-3xl font-bold mb-5 text-center ">
