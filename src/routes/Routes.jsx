@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home/Home";
 import Colleges from "../Pages/Colleges/Colleges";
+import DetailsPage from "../Pages/DetailsPage/DetailsPage";
 
 export const router = createBrowserRouter([
   {
@@ -15,6 +16,12 @@ export const router = createBrowserRouter([
       {
         path: "/colleges",
         element: <Colleges />,
+      },
+      {
+        path: "/details/:id",
+        element: <DetailsPage />,
+        loader: ({ params }) =>
+          fetch(`${import.meta.env.VITE_SERVER_API}/details/${params.id}`),
       },
     ],
   },
