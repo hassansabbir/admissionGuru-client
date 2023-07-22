@@ -9,6 +9,7 @@ const DetailsPage = () => {
     admissionProcess,
     admissionStarts,
     admissionEnds,
+    researchWorks,
     events,
     sports,
   } = collegeData;
@@ -20,7 +21,7 @@ const DetailsPage = () => {
         src={collegeImage}
         alt=""
       />
-      <div className="bg-blue-100 rounded-3xl pt-2 pb-14 mt-10">
+      <div className="bg-blue-100 rounded-3xl shadow-lg pt-2 pb-14 mt-10">
         <h2 className="text-5xl text-center my-10 font-bold">{collegeName}</h2>
         <div className="text-center">
           <h2 className="text-2xl font-bold">
@@ -51,7 +52,10 @@ const DetailsPage = () => {
         <h2 className="text-4xl my-10 font-bold">Our Events:</h2>
         <div className="grid grid-cols-3 gap-10">
           {events.map((event, i) => (
-            <div className="bg-slate-300 p-10 rounded-3xl" key={i}>
+            <div
+              className="bg-slate-200 p-10 shadow-lg hover:shadow-2xl rounded-3xl"
+              key={i}
+            >
               <h2 className="text-3xl font-bold">{event.name}</h2>
               <p className="text-xl my-2">{event.details}</p>
             </div>
@@ -62,7 +66,10 @@ const DetailsPage = () => {
         <h2 className="text-4xl my-10 font-bold">Popular Sports:</h2>
         <div className="grid grid-cols-3 gap-10">
           {sports.map((sport, i) => (
-            <div className="bg-slate-200 p-10 rounded-3xl" key={i}>
+            <div
+              className="bg-slate-100 p-10 shadow-lg hover:shadow-2xl rounded-3xl"
+              key={i}
+            >
               {" "}
               <img
                 className="w-full h-56 rounded-3xl"
@@ -73,6 +80,20 @@ const DetailsPage = () => {
                 {sport.name}
               </h2>
               <p className="text-xl text-center">{sport.details}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="mb-10">
+        <h2 className="text-4xl my-10 font-bold">Research Works:</h2>
+        <div className="grid grid-cols-3 gap-10">
+          {researchWorks.map((researchWork, i) => (
+            <div
+              className="bg-blue-50 p-10 shadow-lg hover:shadow-2xl rounded-3xl"
+              key={i}
+            >
+              <h2 className="text-3xl font-bold">{researchWork.title}</h2>
+              <p className="text-xl my-2">{researchWork.description}</p>
             </div>
           ))}
         </div>
