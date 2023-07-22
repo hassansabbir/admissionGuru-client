@@ -48,7 +48,7 @@ const CollegeCard = ({ college }) => {
           </div>
         </div>
         <Link to={`/details/${_id}`}>
-          <button className="btn w-full bg-blue-800 text-xl text-white">
+          <button className="btn w-full mt-5 bg-blue-800 text-xl text-white">
             View Details
           </button>
         </Link>
