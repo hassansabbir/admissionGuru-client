@@ -17,11 +17,11 @@ const DetailsPage = () => {
   return (
     <>
       <img
-        className=" w-full rounded-3xl h-[800px] "
+        className=" w-full rounded-3xl md:h-[800px] "
         src={collegeImage}
         alt=""
       />
-      <div className="bg-blue-100 rounded-3xl shadow-lg pt-2 pb-14 mt-10">
+      <div className="bg-blue-100 rounded-3xl px-5 md:px-0 shadow-lg pt-2 pb-14 mt-10">
         <h2 className="text-5xl text-center my-10 font-bold">{collegeName}</h2>
         <div className="text-center">
           <h2 className="text-2xl font-bold">
@@ -35,22 +35,22 @@ const DetailsPage = () => {
         </div>
       </div>
       <div className="my-16">
-        <div className="">
+        <div className="px-5 md:px-0">
           <p className="text-xl">
             <span className="text-4xl font-bold">History:</span> <br />{" "}
             {researchHistory}
           </p>
         </div>
-        <div className="mt-10">
+        <div className="mt-10 px-5 md:px-0">
           <p className="text-xl">
             <span className="text-4xl font-bold">Admission Process:</span>
             <br /> {admissionProcess}
           </p>
         </div>
       </div>
-      <div>
+      <div className="px-5 md:px-0">
         <h2 className="text-4xl my-10 font-bold">Our Events:</h2>
-        <div className="grid grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {events.map((event, i) => (
             <div
               className="bg-slate-200 p-10 shadow-lg hover:shadow-2xl rounded-3xl"
@@ -62,9 +62,9 @@ const DetailsPage = () => {
           ))}
         </div>
       </div>
-      <div>
+      <div className="px-5 md:px-0">
         <h2 className="text-4xl my-10 font-bold">Popular Sports:</h2>
-        <div className="grid grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {sports.map((sport, i) => (
             <div
               className="bg-slate-100 p-10 shadow-lg hover:shadow-2xl rounded-3xl"
@@ -84,9 +84,9 @@ const DetailsPage = () => {
           ))}
         </div>
       </div>
-      <div className="mb-10">
+      <div className="mb-10 px-5 md:px-0">
         <h2 className="text-4xl my-10 font-bold">Research Works:</h2>
-        <div className="grid grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {researchWorks.map((researchWork, i) => (
             <div
               className="bg-blue-50 p-10 shadow-lg hover:shadow-2xl rounded-3xl"

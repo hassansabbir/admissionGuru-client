@@ -12,8 +12,10 @@ const CollegeSection = () => {
   }, []);
 
   return (
-    <div>
-      <h2 className="text-5xl text-center font-bold">Our Top Colleges</h2>
+    <div className="px-5 md:px-0">
+      <h2 className="text-3xl md:text-5xl text-center font-bold">
+        Our Top Colleges
+      </h2>
       <div className="border-4 mx-auto my-10 flex justify-between p-2 w-6/12 border-gray-500 rounded-full">
         <input
           className="mx-5 ps-5 w-full text-2xl"

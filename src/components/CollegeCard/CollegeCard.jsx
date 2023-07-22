@@ -13,7 +13,7 @@ const CollegeCard = ({ college }) => {
   } = college;
 
   return (
-    <div className="card w-[450px] bg-slate-50 shadow-xl hover:shadow-2xl">
+    <div className="card md:w-[450px] bg-slate-50 shadow-xl hover:shadow-2xl">
       <figure>
         <img
           className="w-[450px] h-[300px]"
@@ -37,14 +37,14 @@ const CollegeCard = ({ college }) => {
           <span className="font-bold text-blue-800">Admission Ends</span>:{" "}
           {admissionEnds}
         </h2>
-        <div className="flex gap-5 text-lg">
+        <div className="md:flex gap-5 text-lg">
           <div className="bg-slate-100 p-2 w-3/6 shadow-lg rounded-3xl">
             <h2 className="font-bold text-blue-800">Our Events:</h2>
             {events.map((event, i) => (
               <li key={i}>{event.name}</li>
             ))}
           </div>
-          <div className="bg-slate-100 p-2 w-3/6 shadow-lg rounded-3xl">
+          <div className="bg-slate-100 mt-5 md:mt-0 p-2 w-3/6 shadow-lg rounded-3xl">
             <h2 className="font-bold text-blue-800">Our Sports:</h2>
             {sports.map((sport, i) => (
               <li key={i}>{sport.name}</li>

@@ -11,10 +11,10 @@ import photo9 from "../../assets/img9.jpg";
 const PhotoGallery = () => {
   return (
     <div>
-      <h2 className="text-5xl font-bold text-center">
+      <h2 className="text-3xl md:text-5xl font-bold text-center">
         Graduation Ceremony Gallery
       </h2>
-      <p className="text-2xl text-center px-28 my-7">
+      <p className="text-2xl text-center px-5 md:px-28 my-7">
         Celebrate the Moments of Success! 🎓 Step into our Graduation Ceremony
         Gallery and relive the joy and pride of countless graduates as they
         embark on a new chapter. Browse through heartwarming moments of
