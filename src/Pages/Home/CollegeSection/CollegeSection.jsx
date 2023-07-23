@@ -1,15 +1,22 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { FaSearch } from "react-icons/fa";
 import CollegeCard from "../../../components/CollegeCard/CollegeCard";
 
 const CollegeSection = () => {
   const [colleges, setColleges] = useState([]);
+  const [search, setSearch] = useState("");
+  const searchRef = useRef(null);
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_SERVER_API}/colleges`)
+      .get(`${import.meta.env.VITE_SERVER_API}/colleges?search=${search}`)
       .then((data) => setColleges(data.data));
-  }, []);
+  }, [search]);
+
+  const handleSearch = () => {
+    console.log(searchRef.current.value);
+    setSearch(searchRef.current.value);
+  };
 
   return (
     <div className="px-5 md:px-0">
@@ -19,13 +26,16 @@ const CollegeSection = () => {
       <div className="border-4 mx-auto my-10 flex justify-between p-2 w-6/12 border-gray-500 rounded-full">
         <input
           className="mx-5 ps-5 w-full text-2xl"
+          ref={searchRef}
           type="text"
           name="search"
           placeholder="search college"
         />
-        <div className=" bg-gray-500 text-white p-3 cursor-pointer rounded-full">
-          <FaSearch className="w-5 h-5" />
-        </div>
+        <button onClick={handleSearch}>
+          <div className=" bg-gray-500 text-white p-3 cursor-pointer rounded-full">
+            <FaSearch className="w-5 h-5" />
+          </div>
+        </button>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 justify-items-center gap-5">
         {colleges.slice(0, 3).map((college) => (
