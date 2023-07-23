@@ -9,7 +9,11 @@ const PrivetRout = ({ children }) => {
   // console.log(location);
 
   if (loading) {
-    return <progress className="progress w-56"></progress>;
+    return (
+      <div className="text-center mt-72">
+        <span className="loading  loading-spinner loading-lg"></span>
+      </div>
+    );
   }
 
   if (user) {
