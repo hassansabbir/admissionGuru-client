@@ -9,7 +9,7 @@ const CollegeSection = () => {
   const searchRef = useRef(null);
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_SERVER_API}/colleges?search=${search}`)
+      .get(`${import.meta.env.VITE_SERVER_API}/searchColleges?search=${search}`)
       .then((data) => setColleges(data.data));
   }, [search]);
 
