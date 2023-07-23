@@ -8,6 +8,7 @@ import SignUp from "../SignUp/SignUp";
 import PrivetRout from "./PrivetRout";
 import Admission from "../Pages/Admission/Admission";
 import BookingPage from "../Pages/Admission/BookingPage/BookingPage";
+import MyCollege from "../Pages/MyCollege/MyCollege";
 
 export const router = createBrowserRouter([
   {
@@ -49,6 +50,14 @@ export const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(`${import.meta.env.VITE_SERVER_API}/details/${params.id}`),
+      },
+      {
+        path: "/myCollege",
+        element: (
+          <PrivetRout>
+            <MyCollege />
+          </PrivetRout>
+        ),
       },
       {
         path: "/login",

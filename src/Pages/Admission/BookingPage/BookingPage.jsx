@@ -31,7 +31,7 @@ const BookingPage = () => {
         if (data.insertedId) {
           Swal.fire({
             title: "Success",
-            text: "New Product Added Successfully",
+            text: `Successfully Seat Booked to ${collegeData.collegeName}`,
             icon: "success",
             confirmButtonText: "Done",
           });
