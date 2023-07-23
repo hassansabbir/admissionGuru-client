@@ -1,3 +1,4 @@
+import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const CollegeCard = ({ college }) => {
@@ -10,6 +11,7 @@ const CollegeCard = ({ college }) => {
     admissionEnds,
     events,
     sports,
+    rating,
   } = college;
 
   return (
@@ -25,10 +27,15 @@ const CollegeCard = ({ college }) => {
         <h2 className="card-title text-3xl font-bold mb-5 text-center ">
           {collegeName}
         </h2>
-        <p className="line-clamp-3 text-lg">
+        <p className=" line-clamp-2 text-lg">
           <span className="font-bold text-blue-800">History:</span>{" "}
           {researchHistory}
         </p>
+        <h2 className="text-lg">
+          <span className="font-bold flex gap-1 items-center text-blue-800">
+            Ratings: {rating} <FaStar />
+          </span>
+        </h2>
         <h2 className="text-left mt-5 text-lg">
           <span className="font-bold text-blue-800">Admission Starts</span>:{" "}
           {admissionStarts}

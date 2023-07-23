@@ -13,10 +13,10 @@ const Navbar = () => {
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="">Colleges</Link>
+        <Link to="/colleges">Colleges</Link>
       </li>
       <li>
-        <Link to="">Admission</Link>
+        <Link to="/admission">Admission</Link>
       </li>
       <li>
         <Link to="">My College</Link>
@@ -52,15 +52,17 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navItems}</ul>
       </div>
       <div className="navbar-end space-x-3">
-        <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
-          {user && (
+        {user && (
+          <div className="flex gap-3 items-center border-4 rounded-full ps-5 p-1">
+            <h2>{user?.displayName}</h2>
             <div className="avatar">
               <div className="w-10 rounded-full ">
                 <img src={user?.photoURL} />
               </div>
             </div>
-          )}
-        </div>
+          </div>
+        )}
+
         {user?.email ? (
           <>
             <button onClick={handleLogOut} className="btn btn-active btn-ghost">

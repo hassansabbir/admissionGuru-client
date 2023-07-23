@@ -5,6 +5,8 @@ import Colleges from "../Pages/Colleges/Colleges";
 import DetailsPage from "../Pages/DetailsPage/DetailsPage";
 import Login from "../Pages/Login/Login";
 import SignUp from "../SignUp/SignUp";
+import PrivetRout from "./PrivetRout";
+import Admission from "../Pages/Admission/Admission";
 
 export const router = createBrowserRouter([
   {
@@ -21,9 +23,21 @@ export const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <DetailsPage />,
+        element: (
+          <PrivetRout>
+            <DetailsPage />
+          </PrivetRout>
+        ),
         loader: ({ params }) =>
           fetch(`${import.meta.env.VITE_SERVER_API}/details/${params.id}`),
+      },
+      {
+        path: "/admission",
+        element: (
+          <PrivetRout>
+            <Admission />
+          </PrivetRout>
+        ),
       },
       {
         path: "/login",
