@@ -324,3 +324,60 @@
     ]
   }
 ]
+
+
+
+
+[
+  {
+    "collegeName": "Tech Institute of Innovation",
+    "researchPapers": [
+      {
+        "title": "Advancements in Artificial Intelligence",
+        "author": "John Smith",
+        "link": "https://www.cigionline.org/articles/cyber-security-battlefield/?utm_source=google_ads&utm_medium=grant&gclid=Cj0KCQjw_O2lBhCFARIsAB0E8B_petem4V4yIOIzF1RVFLn1Y6UmAjRRugONzeKgys_9KRN-J-bR2r8aAqqxEALw_wcB"
+      }
+    ]
+  },
+  {
+    "collegeName": "Creative Arts University",
+    "researchPapers": [
+      {
+        "title": "Exploring Visual Arts and Perception",
+        "author": "Sarah Adams",
+        "link": "https://brill.com/display/title/15050"
+      }
+    ]
+  },
+  {
+    "collegeName": "Business Institute of Excellence",
+    "researchPapers": [
+      {
+        "title": "Entrepreneurship and Start-Up Ecosystems",
+        "author": "Robert Johnson",
+        "link": "https://blog.hubspot.com/the-hustle/startup-ecosystem#:~:text=A%20startup%20ecosystem%20is%20a,space%2C%20like%20the%20Trends%20community."
+      }
+    ]
+  },
+  {
+    "collegeName": "Medical College of Excellence",
+    "researchPapers": [
+      {
+        "title": "Advancements in Precision Medicine",
+        "author": "Laura Davis",
+        "link": "https://translational-medicine.biomedcentral.com/articles/10.1186/s12967-019-1864-9"
+      }
+    ]
+  },
+  {
+    "collegeName": "Environmental Science Institute",
+    "researchPapers": [
+      {
+        "title": "Climate Change and Mitigation Strategies",
+        "author": "Alex Turner",
+        "link": "https://bio4climate.org/solutions/"
+      }
+    ]
+  }
+]
+
