@@ -1,8 +1,12 @@
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import siteLogo from "../../../assets/admissionGurruLogo.png";
+import { useContext } from "react";
+import { AuthContext } from "../../../Providers/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
   const navItems = (
     <>
       <li>
@@ -19,6 +23,12 @@ const Navbar = () => {
       </li>
     </>
   );
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => console.log(error));
+  };
 
   return (
     <div className="navbar fixed z-10 shadow-md bg-base-100 max-w-[1460px]">
@@ -41,10 +51,29 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navItems}</ul>
       </div>
-      <div className="navbar-end">
-        <Link to="/login">
-          <button className="btn">Login</button>
-        </Link>
+      <div className="navbar-end space-x-3">
+        <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
+          {user && (
+            <div className="avatar">
+              <div className="w-10 rounded-full ">
+                <img src={user?.photoURL} />
+              </div>
+            </div>
+          )}
+        </div>
+        {user?.email ? (
+          <>
+            <button onClick={handleLogOut} className="btn btn-active btn-ghost">
+              Logout
+            </button>
+          </>
+        ) : (
+          <>
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
+          </>
+        )}
       </div>
     </div>
   );

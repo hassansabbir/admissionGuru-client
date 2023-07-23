@@ -2,8 +2,12 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Login.css";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
+import SocialLogin from "../../components/SocialLogin/SocialLogin";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Login = () => {
+  const { signIn } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -35,16 +39,8 @@ const Login = () => {
 
   return (
     <div className="loginPage py-24">
-      <div className="text-white w-7/12 mt-16 ms-auto me-10">
-        <h2 className="text-5xl text-center font-bold">Please Login! </h2>
-        <p className="text-2xl my-5 text-center">
-          Welcome to AdmissionGuru Login! 🚪🔑 Sign in to embark on your journey
-          to educational excellence. As an AdmissionGuru member, access a wealth
-          of information, personalized college recommendations, and expert
-          guidance to make informed decisions about your future.
-        </p>
-      </div>
-      <div className="card ms-auto me-48 flex-shrink-0 w-full max-w-xl bg-base-100 shadow-2xl ">
+      <div className="card ms-auto me-48 mt-10 flex-shrink-0 w-full max-w-xl bg-base-100 shadow-2xl ">
+        <h2 className="text-5xl text-center mt-10 font-bold">Please Login! </h2>
         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
           <div className="form-control">
             <label className="label">
@@ -84,6 +80,7 @@ const Login = () => {
               Login
             </button>
           </div>
+          <SocialLogin />
           <p className="text-center text-xl">
             New To ModaBella?{" "}
             <Link to="/signUp" className="underline font-bold">
