@@ -7,8 +7,8 @@ const Home = () => {
   return (
     <div className="py-24">
       <Banner />
-      <PhotoGallery />
       <CollegeSection />
+      <PhotoGallery />
       <ResearchDoc />
     </div>
   );

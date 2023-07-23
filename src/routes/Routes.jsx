@@ -3,6 +3,7 @@ import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home/Home";
 import Colleges from "../Pages/Colleges/Colleges";
 import DetailsPage from "../Pages/DetailsPage/DetailsPage";
+import Login from "../Pages/Login/Login";
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
         element: <DetailsPage />,
         loader: ({ params }) =>
           fetch(`${import.meta.env.VITE_SERVER_API}/details/${params.id}`),
+      },
+      {
+        path: "/login",
+        element: <Login />,
       },
     ],
   },

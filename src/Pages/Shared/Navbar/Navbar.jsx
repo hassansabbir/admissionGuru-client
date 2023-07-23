@@ -9,7 +9,7 @@ const Navbar = () => {
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/colleges">Colleges</Link>
+        <Link to="">Colleges</Link>
       </li>
       <li>
         <Link to="">Admission</Link>
@@ -42,7 +42,9 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navItems}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Login</a>
+        <Link to="/login">
+          <button className="btn">Login</button>
+        </Link>
       </div>
     </div>
   );

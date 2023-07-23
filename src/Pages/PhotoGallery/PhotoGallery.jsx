@@ -10,7 +10,7 @@ import photo9 from "../../assets/img9.jpg";
 
 const PhotoGallery = () => {
   return (
-    <div>
+    <div className="mt-10">
       <h2 className="text-3xl md:text-5xl font-bold text-center">
         Graduation Ceremony Gallery
       </h2>

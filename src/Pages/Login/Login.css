@@ -1,0 +1,7 @@
+.loginPage{
+  background-image: url("../../assets/login.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 950px;
+}
