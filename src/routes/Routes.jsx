@@ -9,6 +9,7 @@ import PrivetRout from "./PrivetRout";
 import Admission from "../Pages/Admission/Admission";
 import BookingPage from "../Pages/Admission/BookingPage/BookingPage";
 import MyCollege from "../Pages/MyCollege/MyCollege";
+import MyProfile from "../Pages/MyProfile/MyProfile";
 
 export const router = createBrowserRouter([
   {
@@ -58,6 +59,10 @@ export const router = createBrowserRouter([
             <MyCollege />
           </PrivetRout>
         ),
+      },
+      {
+        path: "/myProfile",
+        element: <MyProfile />,
       },
       {
         path: "/login",

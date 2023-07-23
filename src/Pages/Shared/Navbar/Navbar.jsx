@@ -52,17 +52,18 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navItems}</ul>
       </div>
       <div className="navbar-end space-x-3">
-        {user && (
-          <div className="flex gap-3 items-center border-4 rounded-full ps-5 p-1">
-            <h2>{user?.displayName}</h2>
-            <div className="avatar">
-              <div className="w-10 rounded-full ">
-                <img src={user?.photoURL} />
+        <Link to="/myProfile">
+          {user && (
+            <div className="flex gap-3 cursor-pointer items-center border-4 rounded-full ps-5 p-1">
+              <h2>{user?.displayName}</h2>
+              <div className="avatar">
+                <div className="w-10 rounded-full ">
+                  <img src={user?.photoURL} />
+                </div>
               </div>
             </div>
-          </div>
-        )}
-
+          )}
+        </Link>
         {user?.email ? (
           <>
             <button onClick={handleLogOut} className="btn btn-active btn-ghost">
