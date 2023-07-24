@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import Reviews from "./Reviews/Reviews";
 
 const MyCollege = () => {
   const { user } = useContext(AuthContext);
@@ -76,6 +77,7 @@ const MyCollege = () => {
       <div>
         <h2 className="text-5xl text-center font-bold my-16">Review</h2>
       </div>
+      <Reviews />
     </div>
   );
 };

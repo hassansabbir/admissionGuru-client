@@ -10,6 +10,7 @@ import Admission from "../Pages/Admission/Admission";
 import BookingPage from "../Pages/Admission/BookingPage/BookingPage";
 import MyCollege from "../Pages/MyCollege/MyCollege";
 import MyProfile from "../Pages/MyProfile/MyProfile";
+import EditProfile from "../Pages/MyProfile/EditProfile";
 
 export const router = createBrowserRouter([
   {
@@ -63,6 +64,10 @@ export const router = createBrowserRouter([
       {
         path: "/myProfile",
         element: <MyProfile />,
+      },
+      {
+        path: "/editProfile",
+        element: <EditProfile />,
       },
       {
         path: "/login",
