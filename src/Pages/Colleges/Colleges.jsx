@@ -15,7 +15,7 @@ const Colleges = () => {
       <h2 className="text-3xl md:text-5xl font-bold my-10 text-center">
         All Top Colleges
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 justify-items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 justify-items-center">
         {colleges.map((college) => (
           <CollegeCard key={college._id} college={college}></CollegeCard>
         ))}

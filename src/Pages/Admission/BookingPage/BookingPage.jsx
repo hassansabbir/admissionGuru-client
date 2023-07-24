@@ -50,8 +50,8 @@ const BookingPage = () => {
         <div className="hero-content w-full flex-col">
           <div className="card w-full shadow-2xl bg-base-100">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
-              <div className="w-full md:flex gap-5">
-                <div className="form-control md:w-1/2">
+              <div className="w-full lg:flex gap-5">
+                <div className="form-control lg:w-1/2">
                   <label className="label">
                     <span className="label-text text-xl font-bold">
                       Candidate Name
@@ -68,7 +68,7 @@ const BookingPage = () => {
                     <span className="text-red-600">Name is required</span>
                   )}
                 </div>
-                <div className="form-control md:w-1/2">
+                <div className="form-control lg:w-1/2">
                   <label className="label">
                     <span className="label-text text-xl font-bold">Email</span>
                   </label>
@@ -102,8 +102,8 @@ const BookingPage = () => {
                 )}
               </div>
 
-              <div className="w-full md:flex gap-5">
-                <div className="form-control md:w-1/3">
+              <div className="w-full lg:flex gap-5">
+                <div className="form-control lg:w-1/3">
                   <label className="label">
                     <span className="label-text text-xl font-bold">
                       Booking for Subject
@@ -119,7 +119,7 @@ const BookingPage = () => {
                     <span className="text-red-600">Subject is required</span>
                   )}
                 </div>
-                <div className="form-control md:w-1/3">
+                <div className="form-control lg:w-1/3">
                   <label className="label">
                     <span className="label-text text-xl font-bold">
                       Candidate Phone Number
@@ -137,7 +137,7 @@ const BookingPage = () => {
                     </span>
                   )}
                 </div>
-                <div className="form-control md:w-1/3">
+                <div className="form-control lg:w-1/3">
                   <label className="label">
                     <span className="label-text text-xl font-bold">
                       Date Of Birth

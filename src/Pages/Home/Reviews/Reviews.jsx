@@ -59,7 +59,6 @@ const Reviews = () => {
                   <p>{review.email}</p>
                 </div>
               </div>
-
               <div className="bg-slate-100 p-10 w-6/12 rounded-3xl">
                 <p className="text-3xl font-bold">{review.ratedCollege}</p>
                 <div className="">

@@ -3,10 +3,14 @@ import { useForm } from "react-hook-form";
 // import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import useProfile from "../../hooks/useProfile";
+import { useNavigate } from "react-router-dom";
 
 const EditProfile = () => {
   const [myProfile] = useProfile();
   console.log(myProfile);
+
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -32,6 +36,7 @@ const EditProfile = () => {
           });
         }
         reset();
+        navigate("/myProfile", { replace: true });
       });
   };
 
@@ -44,8 +49,8 @@ const EditProfile = () => {
         <div className="hero-content w-full flex-col">
           <div className="card w-full shadow-2xl bg-base-100">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
-              <div className="w-full flex gap-5">
-                <div className="form-control w-1/2">
+              <div className="w-full lg:flex gap-5">
+                <div className="form-control lg:w-1/2">
                   <label className="label">
                     <span className="label-text text-xl font-bold">
                       Candidate Name
@@ -62,7 +67,7 @@ const EditProfile = () => {
                     <span className="text-red-600">Name is required</span>
                   )}
                 </div>
-                <div className="form-control w-1/2">
+                <div className="form-control lg:w-1/2">
                   <label className="label">
                     <span className="label-text text-xl font-bold">Email</span>
                   </label>
@@ -96,8 +101,8 @@ const EditProfile = () => {
                 )}
               </div>
 
-              <div className="w-full flex gap-5">
-                <div className="form-control w-1/3">
+              <div className="w-full lg:flex gap-5">
+                <div className="form-control lg:w-1/3">
                   <label className="label">
                     <span className="label-text text-xl font-bold">
                       Booking for Subject
@@ -114,7 +119,7 @@ const EditProfile = () => {
                     <span className="text-red-600">Subject is required</span>
                   )}
                 </div>
-                <div className="form-control w-1/3">
+                <div className="form-control lg:w-1/3">
                   <label className="label">
                     <span className="label-text text-xl font-bold">
                       Candidate Phone Number
@@ -133,7 +138,7 @@ const EditProfile = () => {
                     </span>
                   )}
                 </div>
-                <div className="form-control w-1/3">
+                <div className="form-control lg:w-1/3">
                   <label className="label">
                     <span className="label-text text-xl font-bold">
                       Date Of Birth
@@ -170,7 +175,7 @@ const EditProfile = () => {
               </div>
               <div className="form-control mt-6">
                 <button className="btn bg-blue-800 hover:bg-blue-600 text-white text-xl">
-                  Submit Edit Details
+                  Save Edit Details
                 </button>
               </div>
             </form>

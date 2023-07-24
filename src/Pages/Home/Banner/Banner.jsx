@@ -2,7 +2,7 @@ import bannerImg from "./../../../assets/29808764_7606072.jpg";
 
 const Banner = () => {
   return (
-    <div className="md:flex items-center justify-between p-5 md:p-0 md:h-[550px]">
+    <div className="lg:flex items-center justify-between p-5 lg:p-0 lg:h-[550px]">
       <div className="">
         <h2 className="text-5xl text-blue-800 font-bold">AdmissionGuru</h2>
         <p className="text-2xl my-5">
@@ -22,7 +22,7 @@ const Banner = () => {
           </button>
         </div>
       </div>
-      <img className="md:w-5/12" src={bannerImg} alt="bannerImg" />
+      <img className="lg:w-5/12" src={bannerImg} alt="bannerImg" />
     </div>
   );
 };

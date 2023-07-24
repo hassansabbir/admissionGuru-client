@@ -15,7 +15,7 @@ const MyCollege = () => {
       </h2>
       <div>
         <img
-          className="w-full rounded-3xl md:h-[750px] "
+          className="w-full rounded-3xl lg:h-[750px] "
           src={myCollege?.collegeData?.collegeImage}
           alt="myCollege"
         />
@@ -28,9 +28,9 @@ const MyCollege = () => {
           {myCollege?.collegeData?.researchHistory}
         </p>
       </div>
-      <div className="px-5 md:px-0">
+      <div className="px-5 md:px-10 lg:px-0">
         <h2 className="text-4xl my-10 font-bold">Popular Sports:</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           {myCollege?.collegeData?.sports?.map((sport, i) => (
             <div
               className="bg-slate-100 p-10 shadow-lg hover:shadow-2xl rounded-3xl"
@@ -38,7 +38,7 @@ const MyCollege = () => {
             >
               {" "}
               <img
-                className="w-full h-56 rounded-3xl"
+                className="w-full md:w-7/12 lg:w-full md:mx-auto h-56 rounded-3xl"
                 src={sport.sportsImage}
                 alt=""
               />
@@ -50,9 +50,9 @@ const MyCollege = () => {
           ))}
         </div>
       </div>
-      <div className="px-5 md:px-0">
+      <div className="px-5 md:px-10 lg:px-0">
         <h2 className="text-4xl my-10 font-bold">Our Events:</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           {myCollege?.collegeData?.events?.map((event, i) => (
             <div
               className="bg-slate-200 p-10 shadow-lg hover:shadow-2xl rounded-3xl"

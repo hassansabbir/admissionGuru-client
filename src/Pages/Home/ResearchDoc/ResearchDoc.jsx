@@ -15,7 +15,7 @@ const ResearchDoc = () => {
       <h2 className="text-3xl md:text-5xl my-16 text-center font-bold">
         Our Recommended <br /> Researches by Students
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-5 px-5 gap-5">
+      <div className="grid grid-cols-1 lg:grid-cols-5 px-5 gap-5">
         {researches.map((research) => (
           <div
             className="bg-slate-100 rounded-3xl shadow-md hover:shadow-xl p-5"

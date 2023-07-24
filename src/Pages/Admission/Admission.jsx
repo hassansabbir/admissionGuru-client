@@ -17,7 +17,7 @@ const Admission = () => {
         Admission Is Going On <br />{" "}
         <span className="text-3xl md:text-4xl">Book Your Seat Now!</span>
       </h2>
-      <div className="grid gap-5 grid-cols-1 md:grid-cols-3">
+      <div className="grid gap-10 grid-cols-1 md:grid-cols-2 md:px-5 lg:grid-cols-3 lg:px-0">
         {colleges.map((college) => (
           <div key={college._id} className="card bg-base-100 shadow-xl">
             <figure>
