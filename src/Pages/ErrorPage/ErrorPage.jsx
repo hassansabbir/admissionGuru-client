@@ -1,11 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import errorImg from "../../assets/errorPage.jpg";
+import { Helmet } from "react-helmet-async";
 
 const ErrorPage = () => {
   const navigate = useNavigate();
 
   return (
     <div className="py-24">
+      <Helmet>
+        <title>404 error</title>
+      </Helmet>
       <button
         onClick={() => {
           navigate(-1);

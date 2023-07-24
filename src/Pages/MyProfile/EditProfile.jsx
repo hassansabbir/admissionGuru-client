@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import useProfile from "../../hooks/useProfile";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const EditProfile = () => {
   const [myProfile] = useProfile();
@@ -42,6 +43,9 @@ const EditProfile = () => {
 
   return (
     <div className="py-24">
+      <Helmet>
+        <title>Edit Details - AdmissionGuru</title>
+      </Helmet>
       <h2 className="text-5xl text-center font-bold">
         Edit Your Profile Details
       </h2>

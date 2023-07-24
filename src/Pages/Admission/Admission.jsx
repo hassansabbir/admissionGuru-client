@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -13,6 +14,9 @@ const Admission = () => {
 
   return (
     <div className="py-24">
+      <Helmet>
+        <title>Admission - AdmissionGuru</title>
+      </Helmet>
       <h2 className="text-3xl md:text-5xl text-center my-10 font-bold">
         Admission Is Going On <br />{" "}
         <span className="text-3xl md:text-4xl">Book Your Seat Now!</span>
@@ -22,6 +26,8 @@ const Admission = () => {
           <div key={college._id} className="card bg-base-100 shadow-xl">
             <figure>
               <img
+                data-aos="zoom-in"
+                data-aos-duration="1000"
                 className="w-[500px] h-[250px]"
                 src={college.collegeImage}
                 alt="college"

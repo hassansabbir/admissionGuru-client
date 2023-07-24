@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const BookingPage = () => {
   const collegeData = useLoaderData();
@@ -42,6 +43,9 @@ const BookingPage = () => {
 
   return (
     <div className="py-24">
+      <Helmet>
+        <title>Book A Seat - AdmissionGuru</title>
+      </Helmet>
       <h2 className="text-3xl md:text-5xl font-bold text-center">
         Book Your Seat In <br />{" "}
         <span className="text-blue-800">{collegeData.collegeName}</span>

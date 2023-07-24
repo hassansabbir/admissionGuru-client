@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Reviews from "./Reviews/Reviews";
 import useProfile from "../../hooks/useProfile";
+import { Helmet } from "react-helmet-async";
 
 const MyCollege = () => {
   const { user } = useContext(AuthContext);
@@ -10,6 +11,9 @@ const MyCollege = () => {
 
   return (
     <div className="py-24">
+      <Helmet>
+        <title>My College - AdmissionGuru</title>
+      </Helmet>
       <h2 className="text-3xl md:text-5xl font-bold my-10 text-center">
         My College
       </h2>
@@ -38,6 +42,8 @@ const MyCollege = () => {
             >
               {" "}
               <img
+                data-aos="zoom-in"
+                data-aos-duration="1000"
                 className="w-full md:w-7/12 lg:w-full md:mx-auto h-56 rounded-3xl"
                 src={sport.sportsImage}
                 alt=""
@@ -55,6 +61,8 @@ const MyCollege = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           {myCollege?.collegeData?.events?.map((event, i) => (
             <div
+              data-aos="flip-right"
+              data-aos-duration="1000"
               className="bg-slate-200 p-10 shadow-lg hover:shadow-2xl rounded-3xl"
               key={i}
             >

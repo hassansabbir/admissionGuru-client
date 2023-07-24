@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import CollegeCard from "../../components/CollegeCard/CollegeCard";
+import { Helmet } from "react-helmet-async";
 
 const Colleges = () => {
   const [colleges, setColleges] = useState([]);
@@ -12,6 +13,9 @@ const Colleges = () => {
 
   return (
     <div className="py-24">
+      <Helmet>
+        <title>Colleges - AdmissionGuru</title>
+      </Helmet>
       <h2 className="text-3xl md:text-5xl font-bold my-10 text-center">
         All Top Colleges
       </h2>

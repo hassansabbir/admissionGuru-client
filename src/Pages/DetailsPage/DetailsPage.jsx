@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 
 const DetailsPage = () => {
@@ -16,6 +17,9 @@ const DetailsPage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Details - AdmissionGuru</title>
+      </Helmet>
       <img
         className=" w-full rounded-3xl lg:h-[800px] "
         src={collegeImage}
@@ -53,6 +57,8 @@ const DetailsPage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           {events.map((event, i) => (
             <div
+              data-aos="flip-right"
+              data-aos-duration="1000"
               className="bg-slate-200 p-10 shadow-lg hover:shadow-2xl rounded-3xl"
               key={i}
             >
@@ -72,6 +78,8 @@ const DetailsPage = () => {
             >
               {" "}
               <img
+                data-aos="zoom-in"
+                data-aos-duration="1000"
                 className="w-full md:w-7/12 lg:w-full md:mx-auto h-56 rounded-3xl"
                 src={sport.sportsImage}
                 alt=""
@@ -89,6 +97,8 @@ const DetailsPage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           {researchWorks.map((researchWork, i) => (
             <div
+              data-aos="flip-right"
+              data-aos-duration="1000"
               className="bg-blue-50 p-10 shadow-lg hover:shadow-2xl rounded-3xl"
               key={i}
             >

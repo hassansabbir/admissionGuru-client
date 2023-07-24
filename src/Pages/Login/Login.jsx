@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import SocialLogin from "../../components/SocialLogin/SocialLogin";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
@@ -39,6 +40,9 @@ const Login = () => {
 
   return (
     <div className="loginPage py-24">
+      <Helmet>
+        <title>Login - AdmissionGuru</title>
+      </Helmet>
       <div className="card ms-auto me-48 mt-10 flex-shrink-0 w-full max-w-xl bg-base-100 shadow-2xl ">
         <h2 className="text-5xl text-center mt-10 font-bold">Please Login! </h2>
         <form onSubmit={handleSubmit(onSubmit)} className="card-body">

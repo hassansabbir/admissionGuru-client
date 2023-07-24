@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import SocialLogin from "../components/SocialLogin/SocialLogin";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const SignUp = () => {
   const { createUser, updateUserProfile, logOut } = useContext(AuthContext);
@@ -51,6 +52,9 @@ const SignUp = () => {
 
   return (
     <div className="signUpPage">
+      <Helmet>
+        <title>Sign Up - AdmissionGuru</title>
+      </Helmet>
       <div className="hero min-h-screen">
         <div className="hero-content flex-col mr-auto">
           <div className="text-center">

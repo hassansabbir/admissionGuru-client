@@ -26,46 +26,64 @@ const PhotoGallery = () => {
       </p>
       <div className="grid grid-cols-3 gap-6 p-10 ">
         <img
+          data-aos="zoom-in"
+          data-aos-duration="1000"
           className="rounded-xl shadow-2xl transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
           src={photo1}
           alt=""
         />
         <img
+          data-aos="zoom-in"
+          data-aos-duration="1000"
           className="rounded-xl shadow-2xl transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
           src={photo2}
           alt=""
         />
         <img
+          data-aos="zoom-in"
+          data-aos-duration="1000"
           className="rounded-xl shadow-2xl transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
           src={photo3}
           alt=""
         />
         <img
+          data-aos="zoom-in"
+          data-aos-duration="1000"
           className="rounded-xl shadow-2xl transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
           src={photo4}
           alt=""
         />
         <img
+          data-aos="zoom-in"
+          data-aos-duration="1000"
           className="rounded-xl shadow-2xl transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
           src={photo5}
           alt=""
         />
         <img
+          data-aos="zoom-in"
+          data-aos-duration="1000"
           className="rounded-xl shadow-2xl transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
           src={photo6}
           alt=""
         />
         <img
+          data-aos="zoom-in"
+          data-aos-duration="1000"
           className="rounded-xl shadow-2xl transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
           src={photo7}
           alt=""
         />
         <img
+          data-aos="zoom-in"
+          data-aos-duration="1000"
           className="rounded-xl shadow-2xl transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
           src={photo8}
           alt=""
         />
         <img
+          data-aos="zoom-in"
+          data-aos-duration="1000"
           className="rounded-xl shadow-2xl transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
           src={photo9}
           alt=""

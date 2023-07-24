@@ -3,6 +3,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import moment from "moment/moment";
 import { Link } from "react-router-dom";
 import useProfile from "../../hooks/useProfile";
+import { Helmet } from "react-helmet-async";
 
 const MyProfile = () => {
   const { user } = useContext(AuthContext);
@@ -10,8 +11,17 @@ const MyProfile = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Profile - AdmissionGuru</title>
+      </Helmet>
       <div className="pt-28 md:flex justify-center items-center px-5 gap-10">
-        <img className="md:w-1/6 rounded-full" src={user?.photoURL} alt="" />
+        <img
+          data-aos="flip-up"
+          data-aos-duration="1000"
+          className="md:w-1/6 rounded-full"
+          src={user?.photoURL}
+          alt=""
+        />
         <div>
           <h2 className="text-3xl md:text-5xl font-bold">
             {myProfile[0]?.name}

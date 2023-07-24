@@ -18,6 +18,8 @@ const CollegeCard = ({ college }) => {
     <div className="card md:w-[450px] bg-slate-50 shadow-xl hover:shadow-2xl">
       <figure>
         <img
+          data-aos="zoom-in"
+          data-aos-duration="2000"
           className="w-[450px] h-[300px]"
           src={collegeImage}
           alt="colleges"
@@ -45,13 +47,21 @@ const CollegeCard = ({ college }) => {
           {admissionEnds}
         </h2>
         <div className="md:flex gap-5 text-lg">
-          <div className="bg-slate-100 p-2 w-3/6 shadow-lg rounded-3xl">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            className="bg-slate-100 p-2 w-3/6 shadow-lg rounded-3xl"
+          >
             <h2 className="font-bold text-blue-800">Our Events:</h2>
             {events.map((event, i) => (
               <li key={i}>{event.name}</li>
             ))}
           </div>
-          <div className="bg-slate-100 mt-5 md:mt-0 p-2 w-3/6 shadow-lg rounded-3xl">
+          <div
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            className="bg-slate-100 mt-5 md:mt-0 p-2 w-3/6 shadow-lg rounded-3xl"
+          >
             <h2 className="font-bold text-blue-800">Our Sports:</h2>
             {sports.map((sport, i) => (
               <li key={i}>{sport.name}</li>
