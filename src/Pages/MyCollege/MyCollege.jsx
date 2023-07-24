@@ -1,21 +1,12 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Reviews from "./Reviews/Reviews";
+import useProfile from "../../hooks/useProfile";
 
 const MyCollege = () => {
   const { user } = useContext(AuthContext);
 
-  const [myCollege, setMyCollege] = useState([]);
-  useEffect(() => {
-    fetch(`http://localhost:5000/allBookings/${user?.email}`, {
-      method: "GET",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(),
-    })
-      .then((res) => res.json())
-      .then((data) => setMyCollege(data.collegeData));
-  }, [user]);
-  console.log(myCollege);
+  const [myCollege] = useProfile();
 
   return (
     <div className="py-24">
@@ -23,22 +14,22 @@ const MyCollege = () => {
       <div>
         <img
           className="w-full rounded-3xl md:h-[750px] "
-          src={myCollege.collegeImage}
+          src={myCollege?.collegeData?.collegeImage}
           alt="myCollege"
         />
         <h2 className="text-4xl text-center font-bold mt-10">
-          {myCollege.collegeName}
+          {myCollege?.collegeData?.collegeName}
         </h2>
         <p className="text-xl mx-16 my-10">
           <span className="font-bold text-blue-800 text-2xl">History: </span>{" "}
           <br />
-          {myCollege.researchHistory}
+          {myCollege?.collegeData?.researchHistory}
         </p>
       </div>
       <div className="px-5 md:px-0">
         <h2 className="text-4xl my-10 font-bold">Popular Sports:</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {myCollege?.sports?.map((sport, i) => (
+          {myCollege?.collegeData?.sports?.map((sport, i) => (
             <div
               className="bg-slate-100 p-10 shadow-lg hover:shadow-2xl rounded-3xl"
               key={i}
@@ -60,7 +51,7 @@ const MyCollege = () => {
       <div className="px-5 md:px-0">
         <h2 className="text-4xl my-10 font-bold">Our Events:</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {myCollege?.events?.map((event, i) => (
+          {myCollege?.collegeData?.events?.map((event, i) => (
             <div
               className="bg-slate-200 p-10 shadow-lg hover:shadow-2xl rounded-3xl"
               key={i}
@@ -77,7 +68,7 @@ const MyCollege = () => {
       <div>
         <h2 className="text-5xl text-center font-bold my-16">Review</h2>
       </div>
-      <Reviews />
+      <Reviews user={user} myCollege={myCollege?.collegeData} />
     </div>
   );
 };
