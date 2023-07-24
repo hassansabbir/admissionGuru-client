@@ -22,21 +22,28 @@ const ResearchDoc = () => {
             key={research._id}
           >
             <h2 className="text-3xl my-5 font-bold">
-              {research.researchPapers[0].title}
+              {research?.researchPapers[0]?.title}
             </h2>
             <h3 className="text-2xl">
               <span className="font-bold text-blue-800">Author: </span>
               <br />
-              {research.researchPapers[0].author}
+              {research?.researchPapers[0]?.author}
             </h3>
             <p className="text-2xl">
               <span className="font-bold text-blue-800">College:</span>
               <br />
-              {research.collegeName}
+              {research?.collegeName}
             </p>
             <div className="text-end">
               <button className="btn w-full mt-5 bg-blue-800 text-white">
-                Visit Link <FaLink />
+                <a
+                  className="flex gap-2"
+                  href={research?.researchPapers[0]?.link}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Visit Link <FaLink />
+                </a>
               </button>
             </div>
           </div>
