@@ -45,7 +45,8 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/">
-          <img className="w-32" src={siteLogo} alt="logo" />
+          <img className="w-32 hidden md:block" src={siteLogo} alt="logo" />
+          <p className="text-xl md:hidden">AdmissionGuru</p>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -66,7 +67,10 @@ const Navbar = () => {
         </Link>
         {user?.email ? (
           <>
-            <button onClick={handleLogOut} className="btn btn-active btn-ghost">
+            <button
+              onClick={handleLogOut}
+              className="btn btn-active hidden md:block btn-ghost"
+            >
               Logout
             </button>
           </>

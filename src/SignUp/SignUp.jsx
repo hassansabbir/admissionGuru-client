@@ -55,16 +55,16 @@ const SignUp = () => {
         <div className="hero-content flex-col mr-auto">
           <div className="text-center">
             <h1 className="text-5xl font-bold mt-20 font-description">
-              Welcome to ModaBella
+              Welcome to AdmssionGuru
             </h1>
             <h1 className="text-5xl font-bold font-description">
               Sign up Now!
             </h1>
             <p className="py-6 text-2xl w-9/12 mx-auto font-description">
-              Join the Fashion Revolution, Sign up at ModaBella! Unlock a world
-              of style, personalized recommendations, and exclusive offers.
-              Create your account now for seamless shopping and a
-              fashion-forward experience!
+              Welcome to AdmissionGuru Sign Up! 🎓🚀 Join our community of
+              aspiring scholars to explore a world of educational opportunities.
+              Create your personalized account and gain access to a vast array
+              of colleges, admission details, and expert guidance.
             </p>
           </div>
           <div className="card flex-shrink-0 w-full max-w-xl shadow-2xl ">

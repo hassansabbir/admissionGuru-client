@@ -11,6 +11,7 @@ import BookingPage from "../Pages/Admission/BookingPage/BookingPage";
 import MyCollege from "../Pages/MyCollege/MyCollege";
 import MyProfile from "../Pages/MyProfile/MyProfile";
 import EditProfile from "../Pages/MyProfile/EditProfile";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
   {
@@ -63,11 +64,19 @@ export const router = createBrowserRouter([
       },
       {
         path: "/myProfile",
-        element: <MyProfile />,
+        element: (
+          <PrivetRout>
+            <MyProfile />
+          </PrivetRout>
+        ),
       },
       {
         path: "/editProfile",
-        element: <EditProfile />,
+        element: (
+          <PrivetRout>
+            <EditProfile />
+          </PrivetRout>
+        ),
       },
       {
         path: "/login",
@@ -78,5 +87,9 @@ export const router = createBrowserRouter([
         element: <SignUp />,
       },
     ],
+  },
+  {
+    path: "*",
+    element: <ErrorPage />,
   },
 ]);

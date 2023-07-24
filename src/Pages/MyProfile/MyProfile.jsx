@@ -10,23 +10,23 @@ const MyProfile = () => {
 
   return (
     <>
-      <div className="pt-28 flex justify-center items-center gap-10">
-        <img className="w-1/6 rounded-full" src={user?.photoURL} alt="" />
+      <div className="pt-28 md:flex justify-center items-center px-5 gap-10">
+        <img className="md:w-1/6 rounded-full" src={user?.photoURL} alt="" />
         <div>
-          <h2 className="text-5xl font-bold">{myProfile[0]?.name}</h2>
-          <p className="text-2xl text-center underline">
-            {myProfile[0]?.email}
-          </p>
+          <h2 className="text-3xl md:text-5xl font-bold">
+            {myProfile[0]?.name}
+          </h2>
+          <p className="md:text-2xl  underline">{myProfile[0]?.email}</p>
           <div className="my-10">
-            <h2 className="text-3xl">
+            <h2 className="text-2xl md:text-3xl">
               <span className="font-bold text-blue-800">Contact Number:</span>
               {myProfile[0]?.phone}
             </h2>
-            <h2 className="text-3xl">
+            <h2 className="text-2xl md:text-3xl">
               <span className="font-bold text-blue-800">Date Of Birth: </span>{" "}
               {moment(myProfile[0]?.bDate).format("l")}
             </h2>
-            <h2 className="text-3xl">
+            <h2 className="text-2xl md:text-3xl">
               <span className="font-bold text-blue-800">Address: </span>{" "}
               {myProfile[0]?.address}
             </h2>
@@ -39,14 +39,16 @@ const MyProfile = () => {
         </Link>
       </div>
       <h2 className="text-4xl text-center font-bold my-10">My College</h2>
-      <div className="flex items-center mb-20 gap-10">
+      <div className="md:flex items-center px-5 mb-20 gap-10">
         <img
-          className="w-3/6"
+          className="md:w-3/6"
           src={myProfile?.collegeData?.collegeImage}
           alt=""
         />
         <div>
-          <h2 className="text-5xl font-bold">{myProfile[0]?.collegeName}</h2>
+          <h2 className="text-3xl md:text-5xl font-bold">
+            {myProfile[0]?.collegeName}
+          </h2>
           <p className="text-3xl my-10">
             <span className="font-bold text-blue-800">College Details:</span>{" "}
             {myProfile?.collegeData?.collegeDetails}

@@ -13,9 +13,9 @@ const Admission = () => {
 
   return (
     <div className="py-24">
-      <h2 className="text-5xl text-center my-10 font-bold">
+      <h2 className="text-3xl md:text-5xl text-center my-10 font-bold">
         Admission Is Going On <br />{" "}
-        <span className="text-4xl">Book Your Seat Now!</span>
+        <span className="text-3xl md:text-4xl">Book Your Seat Now!</span>
       </h2>
       <div className="grid gap-5 grid-cols-1 md:grid-cols-3">
         {colleges.map((college) => (

@@ -24,7 +24,7 @@ const Reviews = () => {
 
   return (
     <div className="my-16">
-      <h2 className="text-5xl font-bold my-10 text-center">
+      <h2 className="text-3xl md:text-5xl font-bold my-10 text-center">
         Reviews of Top Colleges
       </h2>
       <Swiper
@@ -44,21 +44,23 @@ const Reviews = () => {
         <div>
           {reviews.map((review) => (
             <SwiperSlide key={review._id} className="gap-5 py-20 flex-col">
-              <div className="flex gap-10 items-center">
-                <div className="rounded-full">
+              <div className="flex md:gap-10 items-center">
+                <div className="rounded-full md:w-20">
                   <img
-                    className="rounded-full w-10 h-10"
+                    className="rounded-full"
                     src={review.photoUrl}
                     alt="profileImg"
                   />
                 </div>
                 <div>
-                  <h2 className="text-4xl font-bold">{review.name}</h2>
+                  <h2 className="text-2xl md:text-4xl font-bold">
+                    {review.name}
+                  </h2>
                   <p>{review.email}</p>
                 </div>
               </div>
 
-              <div className="bg-slate-100 p-10 rounded-3xl">
+              <div className="bg-slate-100 p-10 w-6/12 rounded-3xl">
                 <p className="text-3xl font-bold">{review.ratedCollege}</p>
                 <div className="">
                   <Rating

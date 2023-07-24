@@ -46,11 +46,11 @@ const Reviews = ({ user, myCollege }) => {
 
   return (
     <div className="flex flex-col py-20 bg-slate-100 rounded-3xl justify-center items-center">
-      <div className="p-5 border shadow-md bg-base-100 hover:shadow-2xl w-5/12 rounded-3xl my-5">
+      <div className="p-5 border shadow-md bg-base-100 hover:shadow-2xl w-11/12 md:w-5/12 rounded-3xl my-5">
         <h2 className="text-3xl my-5 font-bold">
           Give Your Rating on This College.
         </h2>
-        <div className="flex items-center gap-10">
+        <div className="md:flex items-center gap-10">
           <div className="flex">
             {[...Array(5)].map((star, index) => {
               const currentRating = index + 1;
@@ -81,14 +81,14 @@ const Reviews = ({ user, myCollege }) => {
           </p>
         </div>
       </div>
-      <div className="border p-5 text-center bg-base-100 shadow-md hover:shadow-2xl rounded-3xl w-6/12">
+      <div className="border p-5 text-center bg-base-100 shadow-md hover:shadow-2xl rounded-3xl w-11/12 md:w-6/12">
         <h2 className="text-3xl my-5 font-bold">
           Give Your Feedback on This College.
         </h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <textarea
             {...register("feedback")}
-            className="border p-5 text-xl"
+            className="border p-5 w-10/12 text-xl"
             name="feedback"
             placeholder="Give your feedback here"
             cols="60"

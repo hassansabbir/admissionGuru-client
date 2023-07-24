@@ -10,7 +10,9 @@ const MyCollege = () => {
 
   return (
     <div className="py-24">
-      <h2 className="text-5xl font-bold my-10 text-center">My College</h2>
+      <h2 className="text-3xl md:text-5xl font-bold my-10 text-center">
+        My College
+      </h2>
       <div>
         <img
           className="w-full rounded-3xl md:h-[750px] "
